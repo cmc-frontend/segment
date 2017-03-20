@@ -1,5 +1,66 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontend Guidelines</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><header><h1>Segment</h1></header><section><h3 id="white-space-below-image">White Space Below Image</h3><p></p><p>There is white space below image, iframe, object and embed which break the layout.</p><p></p><pre><code class="language-markup" id="white-space-below-image__markup">
-&lt;div class="white-space-below-image">&lt;img src="http://images.freeimages.com/images/previews/cf4/rock-texture-1190599.jpg" alt="rock-texture" width="660" height="440">&lt;/div>
-  </code></pre><pre><code class="language-scss" id="white-space-below-image__scss">.white-space-below-image {
-  background-color: lightgreen;
-}</code></pre><div class="white-space-below-image"><img src="http://images.freeimages.com/images/previews/cf4/rock-texture-1190599.jpg" alt="rock-texture" width="660" height="440"></div></section><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script><script src="assets/js/script.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Segments</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><section class="segment"><h2 class="segment__title" id="grid">Grid</h2><p class="segment__des">make a grid layout.</p><article class="fixed-width"><h3>Method: float-minus-margin</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="grid_float-minus-margin_markup">&lt;div class="grid_float-minus-margin">
+  &lt;li>&lt;div class="min-box green">
+    1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">
+  &lt;/div>&lt;/li>
+  &lt;li>&lt;div class="min-box green">2&lt;/div>&lt;/li>
+  &lt;li>&lt;div class="min-box green">3&lt;/div>&lt;/li>
+&lt;/div></code></pre><pre><code class="language-scss" id="grid_float-minus-margin__scss">.grid_float-minus-margin {
+  margin-right: -10px; // clear the extra gutter
+  &:after { content: ''; display: table; clear: both; } // clear float
+  li {
+    float: left;
+    padding-right: 10px; // gutter
+    box-sizing: border-box;
+  }
+  > :nth-child(1) { width: 25%; }
+  > :nth-child(2) { width: 35%; }
+  > :nth-child(3) { width: 40%; }
+}</code></pre></section><section class="segment__result"><div class="grid_float-minus-margin"><li><div class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></div></li><li><div class="min-box green">2</div></li><li><div class="min-box green">3</div></li></div></section></article><article class="fixed-width"><h3>Method: float-calc</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="grid_float-calc_markup">&lt;div class="grid_float-calc">
+  &lt;li class="min-box green">1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">&lt;/li>
+  &lt;li class="min-box green">2&lt;/li>
+  &lt;li class="min-box green">3&lt;/li>
+&lt;/div></code></pre><pre><code class="language-scss" id="grid_float-calc__scss">.grid_float-calc {
+  &:after { content: ''; display: table; clear: both; } // clear float
+  li {
+    float: left;
+    &:not(:last-child) { margin-right: 10px; }
+  }
+  > :nth-child(1) { width: calc(25% - 10px * 2 / 3); }
+  > :nth-child(2) { width: calc(35% - 10px * 2 / 3); }
+  > :nth-child(3) { width: calc(40% - 10px * 2 / 3); }
+}</code></pre></section><section class="segment__result"><div class="grid_float-calc"><li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li><li class="min-box green">2</li><li class="min-box green">3</li></div></section></article><article class="fixed-width"><h3>Method: flex</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="grid_flex_markup">&lt;div class="grid_flex">
+  &lt;li class="min-box green">1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">&lt;/li>
+  &lt;li class="min-box green">2&lt;/li>
+  &lt;li class="min-box green">3&lt;/li>
+&lt;/div></code></pre><pre><code class="language-scss" id="grid_flex__scss">.grid_flex {
+  display: flex;
+  li {
+    flex: 1 1 auto;
+    &:not(:last-child) { margin-right: 10px; }
+  }
+  > :nth-child(1) { flex-basis: 25%; }
+  > :nth-child(2) { flex-basis: 35%; }
+  > :nth-child(3) { flex-basis: 40%; }
+}</code></pre></section><section class="segment__result"><div class="grid_flex"><li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li><li class="min-box green">2</li><li class="min-box green">3</li></div></section></article><article class="fixed-width"><h3>Method: css-grid</h3><p class="cap">Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+</p><section class="segment__code"><pre><code class="language-markup" id="grid_css-grid_markup">&lt;div class="grid_css-grid">
+  &lt;li class="min-box green">1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">&lt;/li>
+  &lt;li class="min-box green">2&lt;/li>
+  &lt;li class="min-box green">3&lt;/li>
+&lt;/div></code></pre><pre><code class="language-scss" id="grid_css-grid__scss">.grid_css-grid {
+  display: grid;
+  grid-template-columns: 25fr 35fr 40fr;
+  grid-gap: 10px;
+}</code></pre></section><section class="segment__result"><div class="grid_css-grid"><li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li><li class="min-box green">2</li><li class="min-box green">3</li></div></section></article></section><section class="segment"><h2 class="segment__title" id="white-space-below-image">White Space Below Image</h2><p class="segment__des">There is white space below image, iframe, object and embed which break the layout.</p><article class="fixed-width"><section class="segment__code"><pre><code class="language-markup" id="white-space-below-image__markup">&lt;div class="white-space-below-image">
+  &lt;img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
+&lt;/div></code></pre><pre><code class="language-scss" id="white-space-below-image__scss">.white-space-below-image {
+  background-color: #f92672;
+}</code></pre></section><section class="segment__result"><div class="white-space-below-image"><img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100"></div></section></article><article class="fixed-width"><h3>Method: vertical-align</h3><p class="cap">IE6</p><section class="segment__code"><pre><code class="language-markup" id="white-space-below-image_vertical-align_markup">&lt;div class="white-space-below-image_vertical-align">
+  &lt;img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
+&lt;/div></code></pre><pre><code class="language-scss" id="white-space-below-image_vertical-align__scss">.white-space-below-image_vertical-align {
+  background-color: #f92672;
+  img { vertical-align: bottom; } // or top
+}</code></pre></section><section class="segment__result"><div class="white-space-below-image_vertical-align"><img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100"></div></section></article><article class="fixed-width"><h3>Method: display</h3><p class="cap">IE7</p><section class="segment__code"><pre><code class="language-markup" id="white-space-below-image_display_markup">&lt;div class="white-space-below-image_display">
+  &lt;img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
+&lt;/div></code></pre><pre><code class="language-scss" id="white-space-below-image_display__scss">.white-space-below-image_display {
+  background-color: #f92672;
+  img { display: block; }
+}</code></pre></section><section class="segment__result"><div class="white-space-below-image_display"><img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100"></div></section></article></section><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script><script src="assets/js/script.js"></script></body></html>

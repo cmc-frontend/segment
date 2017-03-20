@@ -1,16 +1,33 @@
 {
   "segment": {
+    "grid": {
+      "description": "make a grid layout.",
+      "methods": {
+        "float-minus-margin": {
+          "cap": null
+        },
+        "float-calc": {
+          "cap": null
+        },
+        "flex": {
+          "cap": null
+        },
+        "css-grid": {
+          "cap": "Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+"
+        }
+      }
+    },
     "white space below image": {
       "description": "There is white space below image, iframe, object and embed which break the layout.",
       "preview": true,
-      "methods": [
-        {
-          "vertical-align": "IE6"
+      "methods": {
+        "vertical-align": {
+          "cap": "IE6"
         },
-        {
-          "display": "IE7"
+        "display": {
+          "cap": "IE7"
         }
-      ]
+      }
     }
   }
 }

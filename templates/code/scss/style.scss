@@ -2,18 +2,101 @@
 
 //=> {% if blockName === 'white-space-below-image' %}
 .white-space-below-image {
-  background-color: lightgreen;
+  background-color: #f92672;
 }
 
-//=> {% elif blockName === 'white-space-below-image__vertical-align' %}
+//=> {% elif blockName === 'white-space-below-image_vertical-align' %}
 .white-space-below-image_vertical-align {
+  background-color: #f92672;
   img { vertical-align: bottom; } // or top
 }
 
-//=> {% elif blockName === 'white-space-below-image__display' %}
+//=> {% elif blockName === 'white-space-below-image_display' %}
 .white-space-below-image_display {
+  background-color: #f92672;
   img { display: block; }
 }
+
+//=> {% elif blockName === 'grid_float-minus-margin' %}
+.grid_float-minus-margin {
+  margin-right: -10px; // clear the extra gutter
+  &:after { content: ''; display: table; clear: both; } // clear float
+  li {
+    float: left;
+    padding-right: 10px; // gutter
+    box-sizing: border-box;
+  }
+  > :nth-child(1) { width: 25%; }
+  > :nth-child(2) { width: 35%; }
+  > :nth-child(3) { width: 40%; }
+}
+
+//=> {% elif blockName === 'grid_float-calc' %}
+.grid_float-calc {
+  &:after { content: ''; display: table; clear: both; } // clear float
+  li {
+    float: left;
+    &:not(:last-child) { margin-right: 10px; }
+  }
+  > :nth-child(1) { width: calc(25% - 10px * 2 / 3); }
+  > :nth-child(2) { width: calc(35% - 10px * 2 / 3); }
+  > :nth-child(3) { width: calc(40% - 10px * 2 / 3); }
+}
+
+//=> {% elif blockName === 'grid_flex' %}
+.grid_flex {
+  display: flex;
+  li {
+    flex: 1 1 auto;
+    &:not(:last-child) { margin-right: 10px; }
+  }
+  > :nth-child(1) { flex-basis: 25%; }
+  > :nth-child(2) { flex-basis: 35%; }
+  > :nth-child(3) { flex-basis: 40%; }
+}
+
+//=> {% elif blockName === 'grid_css-grid' %}
+.grid_css-grid {
+  display: grid;
+  grid-template-columns: 25fr 35fr 40fr;
+  grid-gap: 10px;
+}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
+
+//=> {% elif blockName === '' %}
 
 //=> {% endif %}
 //=> {% endmacro %}

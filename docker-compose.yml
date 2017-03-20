@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/www/web/
     working_dir: /www/web
-    container_name: segment
+    container_name: segments
     entrypoint: sh /www/start.sh
     stdin_open: true
     tty: true
