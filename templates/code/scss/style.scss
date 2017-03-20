@@ -1,0 +1,19 @@
+//=> {% macro get(blockName) %}
+
+//=> {% if blockName === 'white-space-below-image' %}
+.white-space-below-image {
+  background-color: lightgreen;
+}
+
+//=> {% elif blockName === 'white-space-below-image__vertical-align' %}
+.white-space-below-image_vertical-align {
+  img { vertical-align: bottom; } // or top
+}
+
+//=> {% elif blockName === 'white-space-below-image__display' %}
+.white-space-below-image_display {
+  img { display: block; }
+}
+
+//=> {% endif %}
+//=> {% endmacro %}

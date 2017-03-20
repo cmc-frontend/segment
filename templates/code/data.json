@@ -1,0 +1,16 @@
+{
+  "segment": {
+    "white space below image": {
+      "description": "There is white space below image, iframe, object and embed which break the layout.",
+      "preview": true,
+      "methods": [
+        {
+          "vertical-align": "IE6"
+        },
+        {
+          "display": "IE7"
+        }
+      ]
+    }
+  }
+}

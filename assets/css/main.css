@@ -1,0 +1,10 @@
+html { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; touch-action: manipulation; }
+body { margin: 0; font-family: 'Lato', sans-serif;}
+img, video { max-width: 100%; height: auto; }
+iframe { max-width: 100%; }
+@media \0screen {
+  img { width: auto; }
+}
+label { cursor: pointer; }
+select { -webkit-appearance: none; }
+a { text-decoration: none; color: inherit; }

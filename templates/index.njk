@@ -1,0 +1,59 @@
+{# variables #}
+{% set pagename = 'segment' %}
+{% set reg_M = r/^M\-(\d*|.*)$/ %}
+
+{# template & code #}
+{% extends 'parts/layout.njk' %}
+{% import 'code/markup.njk' as markup with context %}
+{% import 'code/scss/style.njk' as style with context %}
+
+{# macros #}
+{% macro outputString(str) %}
+  <p>{{ 
+    str 
+    | nl2br
+    | replace('`-', '<code class="language-html">') 
+    | replace('-`', '</code>') 
+    | urlize
+    | safe 
+  }}</p>
+{% endmacro %}
+
+{# main block #}
+{% block main %}
+<header>
+  <h1>Segment</h1>
+</header>
+
+{% for name, content in segment %}
+{% set class = name | replace(' ', '-') %}
+<section>
+  <h3 id="{{ class }}">{{ name | title }}</h3>
+  <p>{{ outputString(content.description) }}</p>
+
+  {# preview #}
+  {% if content.preview %}
+  <pre><code class="language-markup" id="{{ class + '__markup' }}">
+&lt;div class="{{ class }}"&gt;
+    {%- filter trim %}
+      {{ markup.get(class) }}
+    {% endfilter -%}
+&lt;/div&gt;
+  </code></pre>
+  <pre><code class="language-scss" id="{{ class + '__scss' }}">
+    {%- filter trim %}
+      {{ style.get(class) }}
+    {% endfilter -%}
+  </code></pre>
+  <div class="{{ class }}">
+    {{ markup.get(class) }}
+  </div>
+  {% endif %}
+
+  {# methods #}
+  {% for method in content.methods %}
+  {% endfor %}
+</section>
+{% endfor %}
+
+{% endblock %}
