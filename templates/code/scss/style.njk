@@ -18,7 +18,7 @@
 }
 
 {% elif blockName === 'grid_float-minus-margin' %}
-.grid_float-minus-margin {
+.grid_float-minus-margin ul {
   margin-right: -10px; // clear the extra gutter
   &:after { content: ''; display: table; clear: both; } // clear float
   li {
@@ -32,7 +32,7 @@
 }
 
 {% elif blockName === 'grid_float-calc' %}
-.grid_float-calc {
+.grid_float-calc ul {
   &:after { content: ''; display: table; clear: both; } // clear float
   li {
     float: left;
@@ -44,7 +44,7 @@
 }
 
 {% elif blockName === 'grid_flex' %}
-.grid_flex {
+.grid_flex ul {
   display: flex;
   li {
     flex: 1 1 auto;
@@ -56,9 +56,9 @@
 }
 
 {% elif blockName === 'grid_css-grid' %}
-.grid_css-grid {
+.grid_css-grid ul {
   display: grid;
-  grid-template-columns: 25fr 35fr 40fr;
+  grid-template-columns: 25% 35% 40%;
   grid-gap: 10px;
 }
 

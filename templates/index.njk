@@ -31,15 +31,17 @@
   {% if content.preview %}
   <article class="{{ 'full-width' if content.full else 'fixed-width' }}">
     <section class="segment__code">
-      <pre><code class="language-markup" id="{{ class + '__markup' }}">
-        {%- filter trim %} {{ markup.get(class) }} {% endfilter -%}
-      </code></pre>
+      <pre><code class="language-markup" id="{{ class + '__markup' }}">&lt;div class="{{ class }}"&gt;
+  {% filter trim %} {{ markup.get(class) }} {% endfilter %}
+&lt;/div&gt;</code></pre>
       <pre><code class="language-scss" id="{{ class + '__scss' }}">
         {%- filter trim %} {{ style.get(class) }} {% endfilter -%}
       </code></pre>
     </section>
     <section class="segment__result">
-      {{ markup.get(class) }}
+      <div class="{{ class }}">
+        {{ markup.get(class) }}
+      </div>
     </section>
   </article>
   {% endif %}
@@ -51,15 +53,17 @@
       <h3>Method: {{ method_name }}</h3>
       <p class="cap">{{ method_content.cap }}</p>
       <section class="segment__code">
-        <pre><code class="language-markup" id="{{ methodclass + '_markup' }}">
-          {%- filter trim %} {{ markup.get(methodclass) }} {% endfilter -%}
-        </code></pre>
+        <pre><code class="language-markup" id="{{ methodclass + '_markup' }}">&lt;div class="{{ methodclass }}"&gt;
+  {% filter trim %} {{ markup.get(class) }} {% endfilter %}
+&lt;/div&gt;</code></pre>
         <pre><code class="language-scss" id="{{ methodclass + '__scss' }}">
           {%- filter trim %} {{ style.get(methodclass) }} {% endfilter -%}
         </code></pre>
       </section>
       <section class="segment__result">
-        {{ markup.get(methodclass) }}
+        <div class="{{ methodclass }}">
+          {{ markup.get(class) }}
+        </div>
       </section>
     </article>
   {% endfor %}

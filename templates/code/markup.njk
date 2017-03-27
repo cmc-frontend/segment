@@ -1,49 +1,17 @@
 {% macro get(blockName) %}
 
 {% if blockName === 'white-space-below-image' %}
-<div class="white-space-below-image">
   <img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
-</div>
 
-{% elif blockName === 'white-space-below-image_vertical-align' %}
-<div class="white-space-below-image_vertical-align">
-  <img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
-</div>
-
-{% elif blockName === 'white-space-below-image_display' %}
-<div class="white-space-below-image_display">
-  <img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
-</div>
-
-{% elif blockName === 'grid_float-minus-margin' %}
-<div class="grid_float-minus-margin">
-  <li><div class="min-box green">
-    1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">
-  </div></li>
-  <li><div class="min-box green">2</div></li>
-  <li><div class="min-box green">3</div></li>
-</div>
-
-{% elif blockName === 'grid_float-calc' %}
-<div class="grid_float-calc">
-  <li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li>
-  <li class="min-box green">2</li>
-  <li class="min-box green">3</li>
-</div>
-
-{% elif blockName === 'grid_flex' %}
-<div class="grid_flex">
-  <li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li>
-  <li class="min-box green">2</li>
-  <li class="min-box green">3</li>
-</div>
-
-{% elif blockName === 'grid_css-grid' %}
-<div class="grid_css-grid">
-  <li class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"></li>
-  <li class="min-box green">2</li>
-  <li class="min-box green">3</li>
-</div>
+{% elif blockName === 'grid' %}
+  <ul>
+    <li><div class="min-box green">
+      1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">
+      <p style="width: 600px; display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam, tenetur voluptates suscipit cum harum sint magni animi necessitatibus? Ratione laboriosam et quasi doloremque excepturi, qui quam assumenda nobis consequuntur!</p>
+    </div></li>
+    <li><div class="min-box green">2</div></li>
+    <li><div class="min-box green">3</div></li>
+  </ul>
 
 {% elif blockName === '' %}
 
