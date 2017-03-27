@@ -12,9 +12,31 @@
         "flex": {
           "cap": null
         },
-        "css-grid": {
+        "grid": {
           "cap": "Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+"
         }
+      }
+    },
+    "gallery": {
+      "methods": {
+        "inline-block": {
+          "cap": null
+        },
+        "float": {
+          "cap": null
+        },
+        "grid": {
+          "cap": null
+        }
+      }
+    },
+    "media list": {
+      "description": "ways to make a media-list.",
+      "methods": {
+        "display-table": {
+          "cap": null
+        },
+        "float": "cap"
       }
     },
     "white space below image": {

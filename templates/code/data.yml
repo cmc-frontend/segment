@@ -9,8 +9,23 @@ segment:
         cap:
       flex:
         cap:
-      css-grid:
+      grid:
         cap: Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+
+  gallery:
+    methods:
+      inline-block:
+        cap:
+      float:
+        cap:
+      grid:
+        cap:
+  media list:
+    description: ways to make a media-list.
+    methods:
+      display-table:
+        cap:
+      float:
+        cap
   white space below image:
     description: There is white space below image, iframe, object and embed which break the layout.
     preview: true 

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Segments</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><section class="segment"><h2 class="segment__title" id="grid">Grid</h2><p class="segment__des">make a grid layout.</p><article class="fixed-width"><h3>Method: float-minus-margin</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="grid_float-minus-margin_markup">&lt;div class="grid_float-minus-margin">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Segments</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><nav class="page-nav"><ul><li><a href="#grid">grid</a></li><li><a href="#gallery">gallery</a></li><li><a href="#media-list">media list</a></li><li><a href="#white-space-below-image">white space below image</a></li></ul></nav><section class="segment" id="grid"><h2 class="segment__title">Grid</h2><p class="segment__des">make a grid layout.</p><article class="fixed-width"><h3>Method: float-minus-margin</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="grid_float-minus-margin_markup">&lt;div class="grid_float-minus-margin">
   &lt;ul>
     &lt;li>&lt;div class="min-box green">
       1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">
@@ -54,7 +54,7 @@
   > :nth-child(1) { flex-basis: 25%; }
   > :nth-child(2) { flex-basis: 35%; }
   > :nth-child(3) { flex-basis: 40%; }
-}</code></pre></section><section class="segment__result"><div class="grid_flex"><ul><li><div class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"><p style="width:600px;display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam, tenetur voluptates suscipit cum harum sint magni animi necessitatibus? Ratione laboriosam et quasi doloremque excepturi, qui quam assumenda nobis consequuntur!</p></div></li><li><div class="min-box green">2</div></li><li><div class="min-box green">3</div></li></ul></div></section></article><article class="fixed-width"><h3>Method: css-grid</h3><p class="cap">Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+</p><section class="segment__code"><pre><code class="language-markup" id="grid_css-grid_markup">&lt;div class="grid_css-grid">
+}</code></pre></section><section class="segment__result"><div class="grid_flex"><ul><li><div class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"><p style="width:600px;display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam, tenetur voluptates suscipit cum harum sint magni animi necessitatibus? Ratione laboriosam et quasi doloremque excepturi, qui quam assumenda nobis consequuntur!</p></div></li><li><div class="min-box green">2</div></li><li><div class="min-box green">3</div></li></ul></div></section></article><article class="fixed-width"><h3>Method: grid</h3><p class="cap">Firefox 52+, Chrome 57+, Safari 10.1+ Opera 44+</p><section class="segment__code"><pre><code class="language-markup" id="grid_grid_markup">&lt;div class="grid_grid">
   &lt;ul>
     &lt;li>&lt;div class="min-box green">
       1 &lt;img src="http://lorempixel.com/800/800/" alt="" width="800" height="800">
@@ -63,11 +63,149 @@
     &lt;li>&lt;div class="min-box green">2&lt;/div>&lt;/li>
     &lt;li>&lt;div class="min-box green">3&lt;/div>&lt;/li>
   &lt;/ul>
-&lt;/div></code></pre><pre><code class="language-scss" id="grid_css-grid__scss">.grid_css-grid ul {
+&lt;/div></code></pre><pre><code class="language-scss" id="grid_grid__scss">.grid_grid ul {
   display: grid;
   grid-template-columns: 25% 35% 40%;
   grid-gap: 10px;
-}</code></pre></section><section class="segment__result"><div class="grid_css-grid"><ul><li><div class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"><p style="width:600px;display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam, tenetur voluptates suscipit cum harum sint magni animi necessitatibus? Ratione laboriosam et quasi doloremque excepturi, qui quam assumenda nobis consequuntur!</p></div></li><li><div class="min-box green">2</div></li><li><div class="min-box green">3</div></li></ul></div></section></article></section><section class="segment"><h2 class="segment__title" id="white-space-below-image">White Space Below Image</h2><p class="segment__des">There is white space below image, iframe, object and embed which break the layout.</p><article class="fixed-width"><section class="segment__code"><pre><code class="language-markup" id="white-space-below-image__markup">&lt;div class="white-space-below-image">
+}</code></pre></section><section class="segment__result"><div class="grid_grid"><ul><li><div class="min-box green">1 <img src="http://lorempixel.com/800/800/" alt="" width="800" height="800"><p style="width:600px;display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam, tenetur voluptates suscipit cum harum sint magni animi necessitatibus? Ratione laboriosam et quasi doloremque excepturi, qui quam assumenda nobis consequuntur!</p></div></li><li><div class="min-box green">2</div></li><li><div class="min-box green">3</div></li></ul></div></section></article></section><section class="segment" id="gallery"><h2 class="segment__title">Gallery</h2><p class="segment__des"></p><article class="fixed-width"><h3>Method: inline-block</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="gallery_inline-block_markup">&lt;div class="gallery_inline-block">
+  &lt;ul>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre><pre><code class="language-scss" id="gallery_inline-block__scss">.gallery_inline-block ul {
+  margin-right: -15px; // remove the last gutter
+  
+  letter-spacing: -0.34em;
+  > li {
+    display: inline-block;
+    width: 50%;
+    padding: 0 15px 15px 0;
+
+    letter-spacing: 0;
+    box-sizing: border-box;
+
+    @media (min-width: 600px) {
+      width: 33.33333%;
+    }
+    @media (min-width: 900px) {
+      width: 25%;
+    }
+  }
+}</code></pre></section><section class="segment__result"><div class="gallery_inline-block"><ul><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li></ul></div></section></article><article class="fixed-width"><h3>Method: float</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="gallery_float_markup">&lt;div class="gallery_float">
+  &lt;ul>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre><pre><code class="language-scss" id="gallery_float__scss">.gallery_float ul {
+  margin-right: -15px; // remove the last gutter
+
+  > li {
+    float: left;
+    width: 50%;
+    padding: 0 15px 15px 0;
+
+    box-sizing: border-box;
+    &:nth-child(2n+1) { clear: left; }
+
+    @media (min-width: 600px) {
+      width: 33.33333%;
+      &:nth-child(n) { clear: none; }
+      &:nth-child(3n+1) { clear: left; }
+    }
+    @media (min-width: 900px) {
+      width: 25%;
+      &:nth-child(n) { clear: none; }
+      &:nth-child(4n+1) { clear: left; }
+    }
+  }
+}</code></pre></section><section class="segment__result"><div class="gallery_float"><ul><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li></ul></div></section></article><article class="fixed-width"><h3>Method: grid</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="gallery_grid_markup">&lt;div class="gallery_grid">
+  &lt;ul>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+    &lt;li>&lt;img src="http://lorempixel.com/300/200" alt="" width="300" height="200">&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre><pre><code class="language-scss" id="gallery_grid__scss">.gallery_grid ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}</code></pre></section><section class="segment__result"><div class="gallery_grid"><ul><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li><li><img src="http://lorempixel.com/300/200" alt="" width="300" height="200"></li></ul></div></section></article></section><section class="segment" id="media-list"><h2 class="segment__title">Media List</h2><p class="segment__des">ways to make a media-list.</p><article class="fixed-width"><h3>Method: display-table</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="media-list_display-table_markup">&lt;div class="media-list_display-table">
+  &lt;div class="media-list">
+    &lt;figure>&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80">&lt;/figure>
+    &lt;div>
+      &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!&lt;/p>
+      &lt;p>Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.&lt;/p>
+      &lt;p>Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!&lt;/p>
+      &lt;div class="media-list">
+        &lt;figure>&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80">&lt;/figure>
+        &lt;div>
+          &lt;p>Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?&lt;/p>
+          &lt;p>Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.&lt;/p>
+          &lt;p>Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre><pre><code class="language-scss" id="media-list_display-table__scss">.media-list_display-table {
+  .media-list {
+    > figure,
+    > div {
+      display: table-cell;
+      vertical-align: top;
+    }
+    > figure {
+      padding-right: 15px;
+      img { max-width: none; }
+    }
+    > div { width: 10000px; }
+  }
+}</code></pre></section><section class="segment__result"><div class="media-list_display-table"><div class="media-list"><figure><img src="http://lorempixel.com/80/80" alt="" width="80" height="80"></figure><div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!</p><p>Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.</p><p>Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!</p><div class="media-list"><figure><img src="http://lorempixel.com/80/80" alt="" width="80" height="80"></figure><div><p>Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?</p><p>Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.</p><p>Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.</p></div></div></div></div></div></section></article><article class="fixed-width"><h3>Method: float</h3><p class="cap"></p><section class="segment__code"><pre><code class="language-markup" id="media-list_float_markup">&lt;div class="media-list_float">
+  &lt;div class="media-list">
+    &lt;figure>&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80">&lt;/figure>
+    &lt;div>
+      &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!&lt;/p>
+      &lt;p>Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.&lt;/p>
+      &lt;p>Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!&lt;/p>
+      &lt;div class="media-list">
+        &lt;figure>&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80">&lt;/figure>
+        &lt;div>
+          &lt;p>Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?&lt;/p>
+          &lt;p>Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.&lt;/p>
+          &lt;p>Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre><pre><code class="language-scss" id="media-list_float__scss">.media-list_float {
+  .media-list {
+    > figure {
+      float: left;
+      margin-right: 15px;
+    }
+    > div { overflow: hidden; }
+  }
+}</code></pre></section><section class="segment__result"><div class="media-list_float"><div class="media-list"><figure><img src="http://lorempixel.com/80/80" alt="" width="80" height="80"></figure><div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!</p><p>Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.</p><p>Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!</p><div class="media-list"><figure><img src="http://lorempixel.com/80/80" alt="" width="80" height="80"></figure><div><p>Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?</p><p>Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.</p><p>Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.</p></div></div></div></div></div></section></article></section><section class="segment" id="white-space-below-image"><h2 class="segment__title">White Space Below Image</h2><p class="segment__des">There is white space below image, iframe, object and embed which break the layout.</p><article class="fixed-width"><section class="segment__code"><pre><code class="language-markup" id="white-space-below-image__markup">&lt;div class="white-space-below-image">
   &lt;img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
 &lt;/div></code></pre><pre><code class="language-scss" id="white-space-below-image__scss">.white-space-below-image {
   background-color: #f92672;

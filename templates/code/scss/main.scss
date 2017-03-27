@@ -4,6 +4,7 @@ ul, ol { padding: 0; }
 li { list-style: none; }
 img, video { max-width: 100%; height: auto; }
 iframe { max-width: 100%; }
+figure { margin: 0; }
 @media \0screen {
   img { width: auto; }
 }
@@ -30,13 +31,43 @@ pre[class*="language-"] {
 .green { background-color: #a6e22e; }
 .cap { color: #999; }
 
-h1, h2, h3, h4, p, .full-width .segment__code { @extend %global-width; }
+p { margin-top: 0; }
+ul, ol, dl { margin: 0; }
+h1, h2, h3, h4, .segment > p, .full-width .segment__code { @extend %global-width; }
+
+// page nav
+.page-nav {
+  position: sticky;
+  top: 0;
+
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      padding: 0 0.6em;
+
+      background-color: hsl(0, 0%, 95%);
+
+      line-height: 2.2;
+      text-transform: capitalize;
+
+      transition: background-color 0.25s;
+      &:hover { background-color: hsl(0, 0%, 88%); }
+    }
+  }
+}
 
 $gutter: 12px;
 // segment
 .segment {
   margin: 10% 0;
+  &__title { padding-top: 50px; }
 }
+.fixed-width { overflow: hidden; }
 @media (min-width: (1000 / 16) * 1em) {
   .full-width .segment__code,
   .fixed-width {

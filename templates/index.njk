@@ -21,10 +21,22 @@
 
 {# main block #}
 {% block main %}
+
+{# navigation #}
+<nav class="page-nav">
+  <ul>
+    {% for name, content in segment %}
+    {% set class = name | replace(' ', '-') %}
+    <li><a href="#{{ class }}">{{ name }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{# content #}
 {% for name, content in segment %}
 {% set class = name | replace(' ', '-') %}
-<section class="segment">
-  <h2 class="segment__title" id="{{ class }}">{{ name | title }}</h2>
+<section class="segment" id="{{ class }}">
+  <h2 class="segment__title">{{ name | title }}</h2>
   <p class="segment__des">{{ outputString(content.description) }}</p>
 
   {# preview #}
