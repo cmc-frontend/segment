@@ -25,7 +25,17 @@ segment:
       display-table:
         cap:
       float:
-        cap
+        cap:
+  justify:
+    description: make a list justify aligned.
+    methods:
+      text-align:
+        cap:
+  center:
+    description: make element horizontally and vertically center aligned to its parent element.
+    methods:
+      pseudo-element:
+        cpa:
   white space below image:
     description: There is white space below image, iframe, object and embed which break the layout.
     preview: true 

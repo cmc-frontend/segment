@@ -36,7 +36,25 @@
         "display-table": {
           "cap": null
         },
-        "float": "cap"
+        "float": {
+          "cap": null
+        }
+      }
+    },
+    "justify": {
+      "description": "make a list justify aligned.",
+      "methods": {
+        "text-align": {
+          "cap": null
+        }
+      }
+    },
+    "center": {
+      "description": "make element horizontally and vertically center aligned to its parent element.",
+      "methods": {
+        "pseudo-element": {
+          "cpa": null
+        }
       }
     },
     "white space below image": {

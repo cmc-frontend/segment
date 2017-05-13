@@ -89,6 +89,40 @@
   }
 }
 
+{% elif blockName === 'justify_text-align' %}
+.justify_text-align .list {
+  text-align: justify;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  li {
+    display: inline-block;
+  }
+}
+
+{% elif blockName === 'center_pseudo-element' %}
+.center_pseudo-element {
+  height: 500px;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  > p {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+
+    width: 70%;
+  }
+}
+
 {% elif blockName === 'gallery_inline-block' %}
 .gallery_inline-block ul {
   margin-right: -15px; // remove the last gutter
