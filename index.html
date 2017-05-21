@@ -651,6 +651,82 @@
           </div>
         </section>
       </article>
+      <article class="fixed-width">
+        <h3>
+          Method: flex
+        </h3>
+        <p class="cap"></p>
+        <section class="segment__code">
+          <pre>
+<code class="language-markup" id="media-list_flex_markup">&lt;div class="media-list_flex"&gt;
+  &lt;div class="media-list"&gt;
+    &lt;figure&gt;&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80"&gt;&lt;/figure&gt;
+    &lt;div&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!&lt;/p&gt;
+      &lt;p&gt;Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.&lt;/p&gt;
+      &lt;p&gt;Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!&lt;/p&gt;
+      &lt;div class="media-list"&gt;
+        &lt;figure&gt;&lt;img src="http://lorempixel.com/80/80" alt="" width="80" height="80"&gt;&lt;/figure&gt;
+        &lt;div&gt;
+          &lt;p&gt;Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?&lt;/p&gt;
+          &lt;p&gt;Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.&lt;/p&gt;
+          &lt;p&gt;Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+          <pre>
+<code class="language-scss" id="media-list_flex__scss">.media-list_flex {
+  .media-list {
+    display: flex;
+    &gt; figure {
+      flex: 0 0 auto;
+      margin-right: 15px;
+    }
+    &gt; div { flex: 1 1 auto; }
+  }
+}</code>
+</pre>
+        </section>
+        <section class="segment__result">
+          <div class="media-list_flex">
+            <div class="media-list">
+              <figure>
+                <img src="http://lorempixel.com/80/80" alt="" width="80" height="80">
+              </figure>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cum voluptates laudantium similique alias qui magni voluptatibus nobis eum! Aperiam!
+                </p>
+                <p>
+                  Odio dolores praesentium, voluptatum doloremque totam cumque nemo aut placeat? Doloremque consequatur in sunt tempora quibusdam quam possimus necessitatibus obcaecati.
+                </p>
+                <p>
+                  Accusantium consequatur saepe, debitis enim laudantium soluta atque perferendis nostrum asperiores, reiciendis placeat? Adipisci, consequuntur! Similique obcaecati, nam provident dolor!
+                </p>
+                <div class="media-list">
+                  <figure>
+                    <img src="http://lorempixel.com/80/80" alt="" width="80" height="80">
+                  </figure>
+                  <div>
+                    <p>
+                      Animi quibusdam consectetur natus accusantium autem eligendi possimus, similique a odio. Alias, nihil. Corrupti, maxime labore inventore ipsa qui totam?
+                    </p>
+                    <p>
+                      Nesciunt numquam, sint corporis, perspiciatis explicabo pariatur, saepe ullam aut voluptas repudiandae, reiciendis eveniet molestias. Dolorem mollitia cupiditate ea aspernatur.
+                    </p>
+                    <p>
+                      Perspiciatis rem adipisci repellendus, delectus corrupti, voluptate modi repudiandae corporis ipsam, pariatur voluptatum provident odit id nobis libero soluta eveniet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </section>
     <section class="segment" id="justify">
       <h2 class="segment__title">
@@ -712,6 +788,52 @@
           </div>
         </section>
       </article>
+      <article class="fixed-width">
+        <h3>
+          Method: flex
+        </h3>
+        <p class="cap"></p>
+        <section class="segment__code">
+          <pre>
+<code class="language-markup" id="justify_flex_markup">&lt;div class="justify_flex"&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Eaque&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Officiis&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Dolores&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Fugit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Placeat&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code>
+</pre>
+          <pre>
+<code class="language-scss" id="justify_flex__scss">.justify_flex .list {
+  display: flex;
+  justify-content: space-between;
+}</code>
+</pre>
+        </section>
+        <section class="segment__result">
+          <div class="justify_flex">
+            <ul class="list">
+              <li>
+                <a href="">Eaque</a>
+              </li>
+              <li>
+                <a href="">Officiis</a>
+              </li>
+              <li>
+                <a href="">Dolores</a>
+              </li>
+              <li>
+                <a href="">Fugit</a>
+              </li>
+              <li>
+                <a href="">Placeat</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
     </section>
     <section class="segment" id="center">
       <h2 class="segment__title">
@@ -720,6 +842,21 @@
       <p class="segment__des">
         make element horizontally and vertically center aligned to its parent element.
       </p>
+      <h3>
+        Basic styles
+      </h3>
+      <section>
+        <pre>
+<code class="language-scss" id="center-basic__scss">[class*="center_"] {
+  height: 500px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  &gt; p {
+    width: 70%;
+  }
+}</code>
+</pre>
+      </section>
       <article class="fixed-width">
         <h3>
           Method: pseudo-element
@@ -733,28 +870,51 @@
 </pre>
           <pre>
 <code class="language-scss" id="center_pseudo-element__scss">.center_pseudo-element {
-  height: 500px;
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
-
   text-align: center;
   &amp;:before {
     content: '';
-    height: 100%;
     display: inline-block;
+    height: 100%;
     vertical-align: middle;
   }
   &gt; p {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
-
-    width: 70%;
   }
 }</code>
 </pre>
         </section>
         <section class="segment__result">
           <div class="center_pseudo-element">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut, eligendi laboriosam nostrum ipsam unde, aliquam rerum mollitia aperiam excepturi culpa itaque animi aliquid adipisci quisquam cupiditate similique numquam quaerat.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="fixed-width">
+        <h3>
+          Method: flex
+        </h3>
+        <p class="cap"></p>
+        <section class="segment__code">
+          <pre>
+<code class="language-markup" id="center_flex_markup">&lt;div class="center_flex"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut, eligendi laboriosam nostrum ipsam unde, aliquam rerum mollitia aperiam excepturi culpa itaque animi aliquid adipisci quisquam cupiditate similique numquam quaerat.&lt;/p&gt;
+&lt;/div&gt;</code>
+</pre>
+          <pre>
+<code class="language-scss" id="center_flex__scss">.center_flex {
+  display: flex;
+  &gt; p { 
+    margin: auto; 
+  }
+}</code>
+</pre>
+        </section>
+        <section class="segment__result">
+          <div class="center_flex">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut, eligendi laboriosam nostrum ipsam unde, aliquam rerum mollitia aperiam excepturi culpa itaque animi aliquid adipisci quisquam cupiditate similique numquam quaerat.
             </p>
@@ -769,25 +929,14 @@
       <p class="segment__des">
         There is white space below image, iframe, object and embed which break the layout.
       </p>
-      <article class="fixed-width">
-        <section class="segment__code">
-          <pre>
-<code class="language-markup" id="white-space-below-image__markup">&lt;div class="white-space-below-image"&gt;
-  &lt;img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100"&gt;
-&lt;/div&gt;</code>
+      <h3>
+        Basic styles
+      </h3>
+      <section>
+        <pre>
+<code class="language-scss" id="white-space-below-image-basic__scss">[class*="white-space-below-image_" { background-color: #f92672; }</code>
 </pre>
-          <pre>
-<code class="language-scss" id="white-space-below-image__scss">.white-space-below-image {
-  background-color: #f92672;
-}</code>
-</pre>
-        </section>
-        <section class="segment__result">
-          <div class="white-space-below-image">
-            <img src="http://lorempixel.com/100/100/" alt="rock-texture" width="100" height="100">
-          </div>
-        </section>
-      </article>
+      </section>
       <article class="fixed-width">
         <h3>
           Method: vertical-align
@@ -802,10 +951,7 @@
 &lt;/div&gt;</code>
 </pre>
           <pre>
-<code class="language-scss" id="white-space-below-image_vertical-align__scss">.white-space-below-image_vertical-align {
-  background-color: #f92672;
-  img { vertical-align: bottom; } // or top
-}</code>
+<code class="language-scss" id="white-space-below-image_vertical-align__scss">.white-space-below-image_vertical-align img { vertical-align: bottom; } // or top</code>
 </pre>
         </section>
         <section class="segment__result">
@@ -828,10 +974,7 @@
 &lt;/div&gt;</code>
 </pre>
           <pre>
-<code class="language-scss" id="white-space-below-image_display__scss">.white-space-below-image_display {
-  background-color: #f92672;
-  img { display: block; }
-}</code>
+<code class="language-scss" id="white-space-below-image_display__scss">.white-space-below-image_display img { display: block; }</code>
 </pre>
         </section>
         <section class="segment__result">

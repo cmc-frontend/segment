@@ -39,6 +39,17 @@
   <h2 class="segment__title">{{ name | title }}</h2>
   <p class="segment__des">{{ outputString(content.description) }}</p>
 
+  {# basic styles #}
+  {% if content.basic %}
+    <h3>Basic styles</h3>
+    <section>
+      {% set classBasic = class + '-basic' %}
+      <pre><code class="language-scss" id="{{ classBasic + '__scss' }}">
+        {%- filter trim %} {{ style.get(classBasic) }} {% endfilter -%}
+      </code></pre>
+    </section>
+  {% endif %}
+
   {# preview #}
   {% if content.preview %}
   <article class="{{ 'full-width' if content.full else 'fixed-width' }}">

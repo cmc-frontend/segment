@@ -68,6 +68,11 @@ $gutter: 12px;
 .segment {
   margin: 10% 0;
   &__title { padding-top: 50px; }
+  &__result {
+    resize: both;
+    overflow: hidden;
+    > div { max-height: 100%; }
+  }
 }
 .fixed-width { overflow: hidden; }
 @media (min-width: (1000 / 16) * 1em) {

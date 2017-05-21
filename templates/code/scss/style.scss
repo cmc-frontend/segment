@@ -1,21 +1,13 @@
 //=> {% macro get(blockName) %}
 
-//=> {% if blockName === 'white-space-below-image' %}
-.white-space-below-image {
-  background-color: #f92672;
-}
+//=> {% if blockName === 'white-space-below-image-basic' %}
+[class*="white-space-below-image_" { background-color: #f92672; }
 
 //=> {% elif blockName === 'white-space-below-image_vertical-align' %}
-.white-space-below-image_vertical-align {
-  background-color: #f92672;
-  img { vertical-align: bottom; } // or top
-}
+.white-space-below-image_vertical-align img { vertical-align: bottom; } // or top
 
 //=> {% elif blockName === 'white-space-below-image_display' %}
-.white-space-below-image_display {
-  background-color: #f92672;
-  img { display: block; }
-}
+.white-space-below-image_display img { display: block; }
 
 //=> {% elif blockName === 'grid_float-minus-margin' %}
 .grid_float-minus-margin ul {
@@ -89,6 +81,18 @@
   }
 }
 
+//=> {% elif blockName === 'media-list_flex' %}
+.media-list_flex {
+  .media-list {
+    display: flex;
+    > figure {
+      flex: 0 0 auto;
+      margin-right: 15px;
+    }
+    > div { flex: 1 1 auto; }
+  }
+}
+
 //=> {% elif blockName === 'justify_text-align' %}
 .justify_text-align .list {
   text-align: justify;
@@ -102,24 +106,43 @@
   }
 }
 
+//=> {% elif blockName === 'justify_flex' %}
+.justify_flex .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+//=> {% elif blockName === 'center-basic' %}
+[class*="center_"] {
+  height: 500px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  > p {
+    width: 70%;
+  }
+}
+
 //=> {% elif blockName === 'center_pseudo-element' %}
 .center_pseudo-element {
-  height: 500px;
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
-
   text-align: center;
   &:before {
     content: '';
-    height: 100%;
     display: inline-block;
+    height: 100%;
     vertical-align: middle;
   }
   > p {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
+  }
+}
 
-    width: 70%;
+//=> {% elif blockName === 'center_flex' %}
+.center_flex {
+  display: flex;
+  > p { 
+    margin: auto; 
   }
 }
 

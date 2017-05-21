@@ -26,19 +26,26 @@ segment:
         cap:
       float:
         cap:
+      flex:
+        cap:
   justify:
     description: make a list justify aligned.
     methods:
       text-align:
         cap:
+      flex:
+        cap:
   center:
     description: make element horizontally and vertically center aligned to its parent element.
+    basic: true
     methods:
       pseudo-element:
-        cpa:
+        cap:
+      flex:
+        cap:
   white space below image:
     description: There is white space below image, iframe, object and embed which break the layout.
-    preview: true 
+    basic: true 
     methods:
       vertical-align: 
         cap: IE6
