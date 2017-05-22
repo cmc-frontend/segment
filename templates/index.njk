@@ -44,29 +44,13 @@
     <h3>Basic styles</h3>
     <section>
       {% set classBasic = class + '-basic' %}
-      <pre><code class="language-scss" id="{{ classBasic + '__scss' }}">
-        {%- filter trim %} {{ style.get(classBasic) }} {% endfilter -%}
-      </code></pre>
-    </section>
-  {% endif %}
-
-  {# preview #}
-  {% if content.preview %}
-  <article class="{{ 'full-width' if content.full else 'fixed-width' }}">
-    <section class="segment__code">
-      <pre><code class="language-markup" id="{{ class + '__markup' }}">&lt;div class="{{ class }}"&gt;
-  {% filter trim %} {{ markup.get(class) }} {% endfilter %}
-&lt;/div&gt;</code></pre>
-      <pre><code class="language-scss" id="{{ class + '__scss' }}">
-        {%- filter trim %} {{ style.get(class) }} {% endfilter -%}
-      </code></pre>
-    </section>
-    <section class="segment__result">
-      <div class="{{ class }}">
-        {{ markup.get(class) }}
+      <div class="code-wrapper">
+        <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#{{ classBasic + '__scss' }}">copy</button>
+        <pre><code class="language-scss" id="{{ classBasic + '__scss' }}">
+          {%- filter trim %} {{ style.get(classBasic) }} {% endfilter -%}
+        </code></pre>
       </div>
     </section>
-  </article>
   {% endif %}
 
   {# methods #}
@@ -75,13 +59,19 @@
     <article class="{{ 'full-width' if method_content.full else 'fixed-width' }}">
       <h3>Method: {{ method_name }}</h3>
       <p class="cap">{{ method_content.cap }}</p>
-      <section class="segment__code">
-        <pre><code class="language-markup" id="{{ methodclass + '_markup' }}">&lt;div class="{{ methodclass }}"&gt;
+      <section>
+        <div class="code-wrapper">
+          <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#{{ methodclass + '_markup' }}">copy</button>
+<pre><code class="language-markup" id="{{ methodclass + '_markup' }}">&lt;div class="{{ methodclass }}"&gt;
   {% filter trim %} {{ markup.get(class) }} {% endfilter %}
 &lt;/div&gt;</code></pre>
-        <pre><code class="language-scss" id="{{ methodclass + '__scss' }}">
-          {%- filter trim %} {{ style.get(methodclass) }} {% endfilter -%}
-        </code></pre>
+        </div>
+        <div class="code-wrapper">
+          <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#{{ methodclass + '__scss' }}">copy</button>
+          <pre><code class="language-scss" id="{{ methodclass + '__scss' }}">
+            {%- filter trim %} {{ style.get(methodclass) }} {% endfilter -%}
+          </code></pre>
+        </div>
       </section>
       <section class="segment__result">
         <div class="{{ methodclass }}">

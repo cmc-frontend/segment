@@ -91,3 +91,26 @@ $gutter: 12px;
     &:not(:last-child) { margin-right: $gutter; }
   }
 }
+
+// copy button
+.copy-button {
+  padding: 0 1.5em;
+  height: 2.6em;
+  border: 0;
+  color: #fff;
+  background-color: #f92672;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.code-wrapper {
+  position: relative;
+  .copy-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .js &:hover .copy-button {
+    opacity: 1;
+  }
+}
