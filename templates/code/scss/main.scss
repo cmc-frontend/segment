@@ -34,11 +34,16 @@ pre[class*="language-"] {
 p { margin-top: 0; }
 ul, ol, dl { margin: 0; }
 h1, h2, h3, h4, .segment > p, .full-width .segment__code { @extend %global-width; }
+h2 { font-size: 3em; }
 
 // page nav
 .page-nav {
   position: sticky;
   top: 0;
+  z-index: 1000;
+
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
   overflow-x: auto;
   white-space: nowrap;
@@ -52,13 +57,11 @@ h1, h2, h3, h4, .segment > p, .full-width .segment__code { @extend %global-width
       display: block;
       padding: 0 0.6em;
 
-      background-color: hsl(0, 0%, 95%);
-
-      line-height: 2.2;
+      line-height: 2.6;
       text-transform: capitalize;
 
       transition: background-color 0.25s;
-      &:hover { background-color: hsl(0, 0%, 88%); }
+      &:hover { background-color: hsl(0, 0%, 94%); }
     }
   }
 }
@@ -66,7 +69,7 @@ h1, h2, h3, h4, .segment > p, .full-width .segment__code { @extend %global-width
 $gutter: 12px;
 // segment
 .segment {
-  margin: 10% 0;
+  margin: 0 0 15%;
   &__title { padding-top: 50px; }
   &__result {
     resize: both;
