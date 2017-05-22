@@ -1,15 +1,6 @@
 {% macro get(blockName) %}
 
-{% if blockName === 'white-space-below-image-basic' %}
-[class*="white-space-below-image_" { background-color: #f92672; }
-
-{% elif blockName === 'white-space-below-image_vertical-align' %}
-.white-space-below-image_vertical-align img { vertical-align: bottom; } // or top
-
-{% elif blockName === 'white-space-below-image_display' %}
-.white-space-below-image_display img { display: block; }
-
-{% elif blockName === 'grid_float-minus-margin' %}
+{% if blockName === 'grid_float-minus-margin' %}
 .grid_float-minus-margin ul {
   margin-right: -10px; // clear the extra gutter
   &:after { content: ''; display: table; clear: both; } // clear float
@@ -52,6 +43,95 @@
   display: grid;
   grid-template-columns: 25% 35% 40%;
   grid-gap: 10px;
+}
+
+{% elif blockName === 'gallery_inline-block' %}
+.gallery_inline-block ul {
+  margin-right: -15px; // remove the last gutter
+  
+  letter-spacing: -0.34em;
+  > li {
+    display: inline-block;
+    width: 50%;
+    padding: 0 15px 15px 0;
+
+    letter-spacing: 0;
+    box-sizing: border-box;
+
+    @media (min-width: 600px) {
+      width: 33.33333%;
+    }
+    @media (min-width: 900px) {
+      width: 25%;
+    }
+  }
+}
+
+{% elif blockName === 'gallery_float' %}
+.gallery_float ul {
+  margin-right: -15px; // remove the last gutter
+
+  > li {
+    float: left;
+    width: 50%;
+    padding: 0 15px 15px 0;
+
+    box-sizing: border-box;
+    &:nth-child(2n+1) { clear: left; }
+
+    @media (min-width: 600px) {
+      width: 33.33333%;
+      &:nth-child(n) { clear: none; }
+      &:nth-child(3n+1) { clear: left; }
+    }
+    @media (min-width: 900px) {
+      width: 25%;
+      &:nth-child(n) { clear: none; }
+      &:nth-child(4n+1) { clear: left; }
+    }
+  }
+}
+
+{% elif blockName === 'gallery_grid' %}
+.gallery_grid ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+{% elif blockName === 'masonry_multi-column' %}
+.masonry_multi-column ul {
+  overflow: hidden; // fix an chrome overflow issue
+  column-count: 2;
+  column-gap: 20px;
+  li { 
+    margin-bottom: 20px; 
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+// fallback for IE9-
+.lt-ie10 {
+  .masonry {
+    text-align: center;
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      width: 250px;
+      margin: 0 20px 20px 0;
+      text-align: left;
+    }
+  }
 }
 
 {% elif blockName === 'media-list_display-table' %}
@@ -146,67 +226,14 @@
   }
 }
 
-{% elif blockName === 'gallery_inline-block' %}
-.gallery_inline-block ul {
-  margin-right: -15px; // remove the last gutter
-  
-  letter-spacing: -0.34em;
-  > li {
-    display: inline-block;
-    width: 50%;
-    padding: 0 15px 15px 0;
+{% elif blockName === 'white-space-below-image-basic' %}
+[class*="white-space-below-image_"] { background-color: #f92672; }
 
-    letter-spacing: 0;
-    box-sizing: border-box;
+{% elif blockName === 'white-space-below-image_vertical-align' %}
+.white-space-below-image_vertical-align img { vertical-align: bottom; } // or top
 
-    @media (min-width: 600px) {
-      width: 33.33333%;
-    }
-    @media (min-width: 900px) {
-      width: 25%;
-    }
-  }
-}
-
-{% elif blockName === 'gallery_float' %}
-.gallery_float ul {
-  margin-right: -15px; // remove the last gutter
-
-  > li {
-    float: left;
-    width: 50%;
-    padding: 0 15px 15px 0;
-
-    box-sizing: border-box;
-    &:nth-child(2n+1) { clear: left; }
-
-    @media (min-width: 600px) {
-      width: 33.33333%;
-      &:nth-child(n) { clear: none; }
-      &:nth-child(3n+1) { clear: left; }
-    }
-    @media (min-width: 900px) {
-      width: 25%;
-      &:nth-child(n) { clear: none; }
-      &:nth-child(4n+1) { clear: left; }
-    }
-  }
-}
-
-{% elif blockName === 'gallery_grid' %}
-.gallery_grid ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: 900px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+{% elif blockName === 'white-space-below-image_display' %}
+.white-space-below-image_display img { display: block; }
 
 {% elif blockName === '' %}
 

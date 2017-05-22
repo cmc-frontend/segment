@@ -30,6 +30,14 @@
         }
       }
     },
+    "masonry": {
+      "description": "make masonry (pinterest-like) layout.",
+      "methods": {
+        "multi-column": {
+          "cap": null
+        }
+      }
+    },
     "media list": {
       "description": "ways to make a media-list.",
       "methods": {

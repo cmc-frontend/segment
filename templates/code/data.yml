@@ -19,6 +19,11 @@ segment:
         cap:
       grid:
         cap:
+  masonry:
+    description: make masonry (pinterest-like) layout.
+    methods: 
+      multi-column:
+        cap:
   media list:
     description: ways to make a media-list.
     methods:
